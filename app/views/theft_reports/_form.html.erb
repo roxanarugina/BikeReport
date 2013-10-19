@@ -1,0 +1,33 @@
+<%= form_for(@theft_report) do |f| %>
+  <% if @theft_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@theft_report.errors.count, "error") %> prohibited this theft_report from being saved:</h2>
+
+      <ul>
+      <% @theft_report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :theft_date %><br>
+    <%= f.datetime_select :theft_date %>
+  </div>
+  <div class="field">
+    <%= f.label :theft_way,"How it happened?"%><br>
+    <%= select_tag 'theft_report[theft_way]', options_for_select(["partial", "entire"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :bike_data,"Bike description"%><br>
+    <%= f.text_area :bike_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @theft_report.location %>
+</p>
+
+<p>
+  <strong>Theft date:</strong>
+  <%= @theft_report.theft_date %>
+</p>
+
+<p>
+  <strong>Theft way:</strong>
+  <%= @theft_report.theft_way %>
+</p>
+
+<p>
+  <strong>Bike data:</strong>
+  <%= @theft_report.bike_data %>
+</p>
+
+<%= link_to 'Edit', edit_theft_report_path(@theft_report) %> |
+<%= link_to 'Back', theft_reports_path %>

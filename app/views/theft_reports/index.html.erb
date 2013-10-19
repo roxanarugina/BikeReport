@@ -1,0 +1,33 @@
+<h1>Listing theft_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Theft date</th>
+      <th>Theft description</th>
+      <th>Bike description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @theft_reports.each do |theft_report| %>
+      <tr>
+        <td><%= theft_report.location %></td>
+        <td><%= theft_report.theft_date %></td>
+        <td><%= theft_report.theft_way %></td>
+        <td><%= theft_report.bike_data %></td>
+        <td><%= link_to 'Show', theft_report %></td>
+        <td><%= link_to 'Edit', edit_theft_report_path(theft_report) %></td>
+        <td><%= link_to 'Destroy', theft_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Theft report', new_theft_report_path %>

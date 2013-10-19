@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  theft_date: 2013-10-19 15:45:07
+  theft_way: MyString
+  bike_data: MyText
+
+two:
+  location: MyString
+  theft_date: 2013-10-19 15:45:07
+  theft_way: MyString
+  bike_data: MyText
